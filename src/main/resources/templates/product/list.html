@@ -271,7 +271,7 @@
                     <span th:text="${#numbers.formatDecimal(prod.price, 1, 2)} + ' €'">2,50 €</span>
 
                     <!-- EJERCICIO 5.1 -->
-                    <span class="price-type">Tipo de precio</span>
+                    <span class="price-type" th:text="${prod.price % 1 == 0} ? 'Precio exacto' : 'Con céntimos'">Tipo de precio</span>
                 </div>
 
                 <!-- Cálculos -->
