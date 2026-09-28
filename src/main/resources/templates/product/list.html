@@ -287,7 +287,7 @@
                         <span class="calculation__label">Precio / ID</span>
 
                         <!-- EJERCICIO 5.4 -->
-                        <span class="calculation__value">Resultado</span>
+                        <span class="calculation__value" th:text="${prod.price > prod.id} ? 'Precio superior' : 'Precio igual o inferior'">Resultado</span>
                     </div>
                 </section>
 
