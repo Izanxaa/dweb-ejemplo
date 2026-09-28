@@ -47,13 +47,13 @@
             </article>
             <article class="quick-link">
                 <h3>Pedido</h3>
-                <p th:text="'Tu pedido #' + ${numPedido} + ' llegará pronto.' + ">Pedido</p>
+                <p th:text="'Tu pedido #' + ${numPedido} + ' llegará pronto.'">Pedido</p>
                 <p th:text="'Fecha estimada de entrega: '+ ${#dates.format(fechaEntrega, 'dd-MMM')}">Fecha estimada de entrega</p>
             </article>
             <article class="quick-link">
                 <h3>Contacto</h3>
-                <p>Empresa</p>
-                <p>Email</p>
+                <p th:text="'Empresa: '+ ${empresa}">Empresa</p>
+                <p th:text="'Email: '+ ${email}">Email</p>
             </article>
         </section>
     </main>

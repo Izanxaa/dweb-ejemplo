@@ -43,6 +43,8 @@ public class HomeController {
         model.addAttribute("commerce", faker.commerce());
         model.addAttribute("numPedido", faker.number().numberBetween(1, 99));
         model.addAttribute("fechaEntrega", faker.date().future(10, TimeUnit.DAYS));
+        model.addAttribute("empresa", faker.company().name());
+        model.addAttribute("email", faker.internet().emailAddress());
 
         return "home";
     }
