@@ -263,7 +263,7 @@
                 <header>
                     <h2 class="product-name" th:text="${prod.name}">Nombre del producto</h2>
                     <!-- EJERCICIO 5.2 -->
-                    <span class="product-name-type">Longitud del nombre</span>
+                    <span class="product-name-type" th:text="${#strings.length(prod.name) > 20} ? 'Nombre largo' : 'Nombre corto'">Longitud del nombre</span>
                 </header>
 
                 <!-- Precio -->
