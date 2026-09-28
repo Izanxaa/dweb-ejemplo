@@ -296,7 +296,10 @@
                     <div class="comments-box__header">
                         <!-- EJERCICIO 5.7 -->
                         <img class="comments-box__icon"
+                             th:class="${prod.price < 2} ? 'price-band price-band--cheap' :
+                                (${prod.price <= 5} ? 'price-band price-band--medium' : 'price-band price-band--expensive')"
                              src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png"
+
                              alt="Comentarios">
 
                         <!-- EJERCICIO 5.6 -->
