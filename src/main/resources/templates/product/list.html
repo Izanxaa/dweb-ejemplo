@@ -298,7 +298,9 @@
                         <!-- EJERCICIO 5.7 -->
                         <img class="comments-box__icon"
                              src="https://cdn-icons-png.flaticon.com/512/1380/1380338.png"
-
+                             th:src="${#lists.isEmpty(prod.comments)} ?
+                 @{https://static.vecteezy.com/system/resources/thumbnails/054/398/057/small_2x/no-comment-icon-isolated-on-white-background-no-chat-icon-illustration-vector.jpg} :
+                 @{https://cdn-icons-png.flaticon.com/512/1380/1380338.png}"
                              alt="Comentarios">
 
                         <!-- EJERCICIO 5.6 -->
