@@ -39,6 +39,8 @@ public class HomeController {
 
         Faker faker = new Faker(new Locale("es"));
         model.addAttribute("name", faker.name().firstName());
+        model.addAttribute("commerce", faker.commerce());
+
         return "home";
     }
 

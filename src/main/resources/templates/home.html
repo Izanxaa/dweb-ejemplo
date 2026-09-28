@@ -41,9 +41,9 @@
         <section class="quick-links" aria-label="Accesos principales">
             <article class="quick-link">
                 <h3>Oferta del día</h3>
-                <p>Producto</p>
-                <p>Categoría</p>
-                <p>Precio</p>
+                <p th:text="'Producto: '+ ${commerce.productName()}">Producto</p>
+                <p th:text="'Categoría: '+ ${commerce.department()}">Categoría</p>
+                <p th:text="'Precio: '+ ${commerce.price()} + '€'">Precio</p>
             </article>
             <article class="quick-link">
                 <h3>Pedido</h3>
