@@ -47,8 +47,8 @@
             </article>
             <article class="quick-link">
                 <h3>Pedido</h3>
-                <p>Pedido</p>
-                <p>Fecha estimada de entrega</p>
+                <p th:text="'Tu pedido #' + ${numPedido} + ' llegará pronto.' + ">Pedido</p>
+                <p th:text="'Fecha estimada de entrega: '+ ${#dates.format(fechaEntrega, 'dd-MMM')}">Fecha estimada de entrega</p>
             </article>
             <article class="quick-link">
                 <h3>Contacto</h3>

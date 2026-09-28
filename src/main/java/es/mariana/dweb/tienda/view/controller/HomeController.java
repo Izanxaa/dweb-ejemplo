@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 @Controller
 public class HomeController {
@@ -40,6 +41,8 @@ public class HomeController {
         Faker faker = new Faker(new Locale("es"));
         model.addAttribute("name", faker.name().firstName());
         model.addAttribute("commerce", faker.commerce());
+        model.addAttribute("numPedido", faker.number().numberBetween(1, 99));
+        model.addAttribute("fechaEntrega", faker.date().future(10, TimeUnit.DAYS));
 
         return "home";
     }
