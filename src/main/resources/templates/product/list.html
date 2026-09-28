@@ -280,7 +280,7 @@
                         <span class="calculation__label">Caja de 6</span>
 
                         <!-- EJERCICIO 5.3 -->
-                        <span class="calculation__value">-- € </span>
+                        <span class="calculation__value" th:text="${#numbers.formatDecimal(prod.price * 6, 1, 2)} + ' €'">-- € </span>
                     </div>
 
                     <div class="calculation">
